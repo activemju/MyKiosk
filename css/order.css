@@ -1,0 +1,330 @@
+/* 초기화 세팅 */
+
+html{
+    font-size: 62.5%;
+}
+
+body,p,ol,ul{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 웹폰트 연결 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
+
+@font-face{
+    src: url("../font/TossFaceFontMac.ttf");
+    font-family: "Toss Face";
+}
+
+/* ============================================================================================================================ */
+
+/* 로고 레이아웃(header) */
+
+.logo{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 48px;
+}
+
+/* 로고 스타일링(header) */
+
+.logo img{
+    height: 50px;
+    cursor: pointer;
+}
+
+/* ============================================================================================================================ */
+
+/* 카테고리 레이아웃(left-section)*/
+
+.category{
+    margin-left: 54.5px;
+}
+
+button div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.category-emoji{
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+.category-text{
+    margin-bottom: 3px;
+}
+
+/* 카테고리 스타일링(left-section)*/
+
+/* 클릭 전 CSS */
+.sandwich, .wrap, .salad, .breakfast, .smileSub{
+    background-color: #fff;
+    border: solid #000 2px;
+    min-width: 200px;
+    min-height: 70px;
+    margin: 0 7.5px;
+    border-radius: 35px;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+/* 클릭 후 CSS */
+.sandwich{
+    background-color: #009945;
+}
+
+.category-emoji{
+    font-family: 'Toss Face';
+    font-size: 3.6rem;
+}
+
+.category-text{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #000;
+}
+
+/* ============================================================================================================================ */
+
+/* 메뉴 공통 레이아웃(left-section)*/
+
+.new, .premium, .classic, .fresh-and-light{
+    margin-top: 53px;
+    margin-left: 62px;
+}
+
+.fresh-and-light{
+    margin-bottom: 50px;
+}
+
+.title{
+    margin-bottom: 25px;
+}
+
+.item-list{
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    grid-template-rows: 300px 300px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.item{
+    position: relative;
+    width: 270px;
+    height: 300px;
+    overflow: hidden;
+
+    padding-top: 220px;
+    padding-left: 20px;
+    
+}
+
+.item img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 메뉴 공통 스타일링(left-section) */
+
+.title, .name,.price{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+.title{
+    font-size: 3.6rem;
+    color: #000;
+}
+
+.name{
+    font-size: 2.4rem;
+    color: #000;
+}
+
+.price{
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+.sandwich-img{
+    height: 250px;
+}
+
+.item{
+    background-color: #fff;
+    border: solid 2px #000;
+    box-sizing: border-box;
+}
+
+/* 클릭 후 CSS */
+
+.item:hover{
+    background-color: #009945;
+    cursor: pointer;
+}
+.price:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* ============================================================================================================================ */
+
+/* 주문서 레이아웃 (right-section) */
+
+.section-right{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.order-list{
+    margin-top: 96px;
+    margin-left: 65px;
+}
+
+/* =======================↓↓↓변화하는부분↓↓↓=========================== */
+/* =======================↓↓↓자바스크립트↓↓↓=========================== */
+
+.products{
+    /* background-color: #009945; */
+    height: 350px;
+}
+
+.product-category{
+    float: left;
+}
+
+.product-price{
+    float: right;
+}
+
+.product-detail{
+    margin-top: 15px;
+}
+
+.product-sandwich{
+    width: 495px;
+    margin-top: 40px;
+    margin-left: 65px;
+}
+
+.product8, .product9{
+    position: relative;
+    width: 460.5px;
+    height: 30px;
+    margin: 5px 0;
+}
+
+.product8 p, .product9 p{
+    position: absolute;
+    left: 0;
+}
+
+.product8 img, .product9 img{
+    position: absolute;
+    top: 8px;
+    right: 0;
+
+    cursor: pointer;
+}
+
+/* =======================↑↑↑자바스크립트↑↑↑=========================== */
+/* =======================↑↑↑변화하는부분↑↑↑=========================== */
+
+.total{
+    position: absolute;
+    width: 495px;
+    left: 65px;
+    bottom: 230px;
+}
+
+.total-contour{
+    margin-bottom: 10px;
+}
+
+.total-name{
+    float: left;
+}
+
+.total-price{
+    float: right;
+}
+
+.confirm-window{
+    position: absolute;
+    left: 65px;
+    bottom: 80px;
+}
+
+.confirm-btn{
+    margin-left: -4px;
+}
+
+
+/* 주문서 스타일링(right-section) */
+
+.section-right{
+    background-color: #FFCA01;
+    width: 640px;
+    height: 100vh;
+}
+
+.order-title, .product-category, .product-price, .total-name, .total-price{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #000;
+}
+
+.order-contour, .product-contour, .total-contour, .product-detail{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 2.0rem;
+}
+
+.order-contour, .product-contour{
+    color: #CCA100;
+}
+
+.total-contour, .product-detail{
+    color: #000;
+}
+
+.reset-btn{
+    background-color: #FFCA01;
+    border: solid #000 3px;
+    min-width: 150px;
+    min-height: 100px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #000;
+
+    cursor: pointer;
+}
+
+.confirm-btn{
+    background-color: #000000;
+    border: solid #000 3px;
+    min-width: 350px;
+    min-height: 100px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 3.6rem;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+/* ============================================================================================================================ */

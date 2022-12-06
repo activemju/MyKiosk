@@ -1,0 +1,164 @@
+/* 초기화 세팅 */
+
+html{
+    font-size: 62.5%;
+}
+
+body,p,ol,ul{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 웹폰트 연결 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@font-face{
+    src: url("../font/TossFaceFontMac.ttf");
+    font-family: "Toss Face";
+}
+
+
+/* ============================================ */
+
+/* 백그라운드 이미지 */
+
+body{
+    background-image: url(../img_sc/로고/subway_background_img.png);
+    background-size: 1920px, 1080px;
+}
+
+/* ============================================ */
+
+/* 레이아웃 */
+
+.section{
+    width: 1381px;
+    margin: auto;
+}
+
+.main-container{
+    position: relative;
+    margin-top: 200px;
+
+    width: 1380px;
+    height: 880px;
+}
+
+.box{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -99;
+}
+
+.title-container div{
+    display: inline-block;
+}
+
+.title-container, .subtitle, .contour-1, .contour-2, .logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.title-container{
+    top: 145px;
+}
+
+.subtitle{
+    top: 300px;
+}
+
+.contour-1{
+    top: 382px;
+}
+
+.paragraph{
+    position: absolute;
+    top: 414px;
+    left: 85px;
+}
+
+.contour-2{
+    top: 534px;
+}
+
+.btn-container{
+    position: absolute;
+    top: 615px;
+    left: 314.5px;
+}
+
+.take-out, .eat-in{
+    padding-bottom: 6px;
+}
+
+.logo{
+    top: 800px;
+}
+
+/* ============================================ */
+
+/* 텍스트 스타일링 */
+
+.title-emoji{
+    font-family: 'Toss Face';
+}
+
+.title-text, .subtitle, .contour-1, .contour-2, .take-out, .eat-in{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+}
+
+.paragraph{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+.title-text, .subtitle, .take-out, .eat-in{
+    color: #000;
+}
+
+.contour-1, .contour-2, .paragraph{
+    color: #CCC;
+}
+
+.title-text, .title-emoji{
+    font-size: 9.6rem;
+}
+
+.subtitle, .take-out, .eat-in{
+    font-size: 3.2rem;
+}
+
+.contour-1, .contour-2{
+    font-size: 2.0rem;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+}
+
+/* 버튼 스타일링 */
+
+.btn-container button{
+    background-color: #fff;
+    border: solid #000 2px;
+    min-width: 300px;
+    min-height: 100px;
+    margin: 0 37.5px;
+    border-radius: 100px;
+}
+
+.btn-container button:hover{
+    background-color: #009945;
+    cursor: pointer;
+}
+
+/* 로고 스타일링 */
+
+.logo img{
+    height: 50px;
+}
