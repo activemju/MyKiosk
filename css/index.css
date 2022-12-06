@@ -1,0 +1,60 @@
+/* 초기화 세팅 */
+
+html{
+    font-size: 62.5%;
+}
+
+body,p,ol,ul{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 웹폰트 연결 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+/* ============================================ */
+
+/* 화면 사이즈 */
+
+.section{
+    width: 1080px;
+    height: 1920px;
+
+
+    margin: auto;
+    text-align: center;
+}
+
+/* 로고 컨테이너 */
+
+.logo-container{
+    padding-top: 50px;
+}
+
+/* 버튼 컨테이너 */
+
+.welcome-text{
+    margin: 50px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.btn-container button{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+
+    background-color: #50B848;
+    border: none;
+    padding: 10px;
+    min-width: 150px;
+    margin: 0 15px;
+    border-radius: 24px;
+    cursor: pointer;
+}

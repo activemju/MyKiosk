@@ -1,0 +1,168 @@
+/* 초기화 세팅 */
+
+html{
+    font-size: 62.5%;
+}
+
+body,p,ol,ul{
+    margin: 0;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* 웹폰트 연결 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+
+/* ============================================ */
+
+/* 화면 사이즈 */
+
+.section{
+    width: 1080px;
+    height: 1920px;
+
+
+    margin: auto;
+    text-align: center;
+}
+
+/* 로고 */
+
+.logo img{
+    width: 100px;
+
+    padding-top: 30px;
+}
+
+/* 상품 목록 */
+
+.item-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    margin-top: 50px;
+}
+
+.item{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 5px;
+
+    height: 300px;
+    line-height: 300px;
+}
+
+.item:hover{
+    cursor: pointer;
+    background-color: #50B848;
+}
+
+.item img{
+    width: 200px;
+    vertical-align: middle;
+}
+
+
+/* 주문 상태*/
+
+.section-bottom{
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin: 5px;
+
+    padding-top: 10px;
+}
+
+.order-list{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* 주문 테이블 */
+
+table{
+    margin: auto;
+    width: 100%;
+
+    padding-top: 20px;
+}
+
+table th{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    background-color: #50B848;
+    border: none;
+    color: #fff;
+    padding: 5px;
+}
+
+table tr{
+    background-color: rgb(254, 255, 254);
+    height:30px;
+
+}
+
+table tr td{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.delete-btn {
+    background-color: #ddd;
+    color: #222;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.delete-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* 주문하기, 취소하기 버튼 */
+
+.confirm-window{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.confirm-window button{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    border: none;
+    padding: 10px;
+    min-width: 150px;
+    margin: 0 10px;
+    border-radius: 24px;
+}
+
+.confirm-btn{
+    background-color: #50B848;
+    color: #fff;
+}
+
+.confirm-btn:hover{
+    background-color: #388133;
+    cursor: pointer;
+}
+
+.reset-btn{
+    background-color: #ddd;
+    color: #222;
+}
+
+.reset-btn:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
