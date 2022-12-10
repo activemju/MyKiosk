@@ -107,7 +107,7 @@ button div{
     margin-bottom: 25px;
 }
 
-.item-list{
+.premium-item-list, .classic-item-list, .fresh-and-light-item-list {
     display: grid;
     grid-template-columns: 270px 270px 270px 270px;
     grid-template-rows: 300px 300px;
@@ -162,17 +162,14 @@ button div{
     background-color: #fff;
     border: solid 2px #000;
     box-sizing: border-box;
+    cursor: pointer;
 }
-
-/* 클릭 후 CSS */
 
 .item:hover{
     background-color: #009945;
-    cursor: pointer;
 }
-.price:hover{
+.item:hover .price{
     color: #000;
-    cursor: pointer;
 }
 
 
@@ -191,11 +188,7 @@ button div{
     margin-left: 65px;
 }
 
-/* =======================↓↓↓변화하는부분↓↓↓=========================== */
-/* =======================↓↓↓자바스크립트↓↓↓=========================== */
-
 .products{
-    /* background-color: #009945; */
     height: 350px;
 }
 
@@ -203,13 +196,32 @@ button div{
     float: left;
 }
 
-.product-price{
+.product-numberOfUnits{
     float: right;
 }
 
-.product-detail{
+.product-details-container{
     margin-top: 15px;
+    height: 280px;
+    overflow: auto;
 }
+
+.product-details-container::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+.product-details-container::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #CCA100; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+.product-details-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0,0.1);  /*스크롤바 뒷 배경 색상*/
+    border-radius: 10px;
+}
+
 
 .product-sandwich{
     width: 495px;
@@ -217,28 +229,25 @@ button div{
     margin-left: 65px;
 }
 
-.product8, .product9{
+.product-detail{
     position: relative;
     width: 460.5px;
     height: 30px;
     margin: 5px 0;
 }
 
-.product8 p, .product9 p{
+.product-detail p{
     position: absolute;
     left: 0;
 }
 
-.product8 img, .product9 img{
+.product-detail img{
     position: absolute;
     top: 8px;
     right: 0;
 
     cursor: pointer;
 }
-
-/* =======================↑↑↑자바스크립트↑↑↑=========================== */
-/* =======================↑↑↑변화하는부분↑↑↑=========================== */
 
 .total{
     position: absolute;
@@ -278,7 +287,7 @@ button div{
     height: 100vh;
 }
 
-.order-title, .product-category, .product-price, .total-name, .total-price{
+.order-title, .product-category, .product-numberOfUnits, .total-name, .total-price{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
     font-size: 3.6rem;
