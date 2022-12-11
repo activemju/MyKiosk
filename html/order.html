@@ -22,58 +22,147 @@
         </div>
     </div>
 
-
-
     <!-- 섹션 -->
     <div class="section">
         <!-- 왼쪽 섹션 -->
         <div class="section-left">
-            <!-- 카테고리 -->
-            <div class="category">
-                <button type="button" class="sandwich">
+            <div class="category-and-menu">
+        
+                <!-- 카테고리 -->
+                <input type="radio" name="catagory" id="sandwich" checked>
+                <label for="sandwich">
                     <div class="category-emoji">🥪</div>
                     <div class="category-text">샌드위치</div>
-                </button>
-                <button type="button" class="wrap">
+                </label>
+                <input type="radio" name="catagory" id="wrap">
+                <label for="wrap">
                     <div class="category-emoji">🌯</div>
                     <div class="category-text">랩ㆍ기타</div>
-                </button>
-                <button type="button" class="salad">
+                </label>
+                <input type="radio" name="catagory" id="salad">
+                <label for="salad">
                     <div class="category-emoji">🥗</div>
                     <div class="category-text">샐러드</div>
-                </button>
-                <button type="button" class="breakfast">
+                </label>
+                <input type="radio" name="catagory" id="breakfast">
+                <label for="breakfast">
                     <div class="category-emoji">🌞</div>
                     <div class="category-text">아침메뉴</div>
-                </button>
-                <button type="button" class="smileSub">
+                </label>
+                <input type="radio" name="catagory" id="smileSub">
+                <label for="smileSub">
                     <div class="category-emoji">😊</div>
                     <div class="category-text">스마일썹</div>
-                </button>
+                </label>
+                
+                <!-- 메뉴 -->
+                <!-- 샌드위치 -->
+                <div class="menu tab1">
+                    <div class="menu-sandwich">
+                        <!-- 신제품 -->
+                        <div class="new">
+                            <p class="title">와 신제품!</p>
+                            <div class="new-item-list"></div>
+                        </div>
+                        <!-- 프리미엄 -->
+                        <div class="premium">
+                            <p class="title">프리미엄</p>
+                            <div class="premium-item-list"></div>
+                        </div>
+                        <!-- 클래식 -->
+                        <div class="classic">
+                            <p class="title">클래식</p>
+                            <div class="classic-item-list"></div>
+                        </div>
+                        <!-- 프레쉬 앤 라이트 -->
+                        <div class="fresh-and-light">
+                            <p class="title">프레쉬 앤 라이트</p>
+                            <div class="fresh-and-light-item-list"></div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- 랩, 기타 -->
+                <div class="menu tab2">
+                    <div class="menu-wrap">
+                        <!-- 그릴드 -->
+                        <div class="grilled">
+                            <p class="title">그릴드 랩</p>
+                            <div class="grilled-item-list"></div>
+                        </div>
+                        <!-- 일반 -->
+                        <div class="normal">
+                            <p class="title">일반 랩</p>
+                            <div class="normal-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 샐러드 -->
+                <div class="menu tab3">
+                    <div class="menu-salad">
+                        <!-- 신제품 -->
+                        <div class="new">
+                            <p class="title">와 신제품!</p>
+                            <div class="new-item-salad"></div>
+                        </div>
+                        <!-- 프리미엄 -->
+                        <div class="premium">
+                            <p class="title">프리미엄</p>
+                            <div class="premium-item-salad"></div>
+                        </div>
+                        <!-- 클래식 -->
+                        <div class="classic">
+                            <p class="title">클래식</p>
+                            <div class="classic-item-salad"></div>
+                        </div>
+                        <!-- 프레쉬 앤 라이트 -->
+                        <div class="fresh-and-light">
+                            <p class="title">프레쉬 앤 라이트</p>
+                            <div class="fresh-and-light-item-salad"></div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- 아침메뉴 -->
+                <div class="menu tab4">
+                    <div class="menu-breakfast">
+                        <!-- 그릴드 랩 -->
+                        <div class="break-grilled">
+                            <p class="title">에그앤치즈 그릴드 랩</p>
+                            <div class="break-grilled-item-list"></div>
+                        </div>
+                        <!-- 일반 랩 -->
+                        <div class="break-normal">
+                            <p class="title">에그앤치즈 랩</p>
+                            <div class="break-normal-item-list"></div>
+                        </div>
+                        <!-- 샌드위치 -->
+                        <div class="break-sandwich">
+                            <p class="title">에그앤치즈 샌드위치</p>
+                            <div class="break-sandwich-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu tab5">
+                    <div class="menu-smilesub">
+                        <!-- 그릴드 랩 -->
+                        <div class="cookie">
+                            <p class="title">쿠키</p>
+                            <div class="cookie-item-list"></div>
+                        </div>
+                        <!-- 일반 랩 -->
+                        <div class="soup">
+                            <p class="title">스프</p>
+                            <div class="soup-item-list"></div>
+                        </div>
+                        <!-- 샌드위치 -->
+                        <div class="potato">
+                            <p class="title">감자튀김</p>
+                            <div class="potato-item-list"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- 메뉴 -->
-            <div class="menu">
-                <!-- 신제품 -->
-                <div class="new">
-                    <p class="title">와 신제품!</p>
-                    <div class="new-item-list"></div>
-                </div>
-                <!-- 프리미엄 -->
-                <div class="premium">
-                    <p class="title">프리미엄</p>
-                    <div class="premium-item-list"></div>
-                </div>
-                <!-- 클래식 -->
-                <div class="classic">
-                    <p class="title">클래식</p>
-                    <div class="classic-item-list"></div>
-                </div>
-                <!-- 프레쉬 앤 라이트 -->
-                <div class="fresh-and-light">
-                    <p class="title">프레쉬 앤 라이트</p>
-                    <div class="fresh-and-light-item-list"></div>
-                </div> 
-            </div>
+
         </div>
         <!-- 오른쪽 섹션 -->
         <div class="section-right">
@@ -85,7 +174,7 @@
             <!-- 주문샌드위치 -->
             <div class="products">
                 <div class="product-sandwich">
-                    <div class="product-category">샌드위치</div>
+                    <div class="product-category">상품 개수</div>
                     <div class="product-numberOfUnits">0개</div>
                     <div class="product-contour">============================================</div>
                     <div class="product-details-container">
@@ -105,10 +194,51 @@
                 <button class="confirm-btn">결제하기</button>
             </div>
         </div>
+
+        <!-- 모달 -->
+        <div class="modals hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal1 hidethis">
+                <h1 class="modal-emoji">😲</h1>
+                <p class="modal-text" >아직 취소할 상품이 없네요!</p>
+                <div class="modal-btn">
+                    <button class="yes-btn1">그러게요</button>
+                </div>
+            </div>
+            <div class="modal2 hidethis">
+                <h1 class="modal-emoji">🤔</h1>
+                <p class="modal-text" >정말 모두 취소하시겠어요?</p>
+                <div class="modal-btn">
+                    <button class="no-btn1">잠시만요</button>
+                    <button class="yes-btn2">그럴게요</button>
+                </div>
+            </div>
+            <div class="modal3 hidethis">
+                <h1 class="modal-emoji">❗</h1>
+                <p class="modal-text" >상품을 먼저 선택해주세요!</p>
+                <div class="modal-btn">
+                    <button class="yes-btn3">알았어요</button>
+                </div>
+            </div>
+            <div class="modal4 hidethis">
+                <h1 class="modal-emoji">🌿</h1>
+                <p class="modal-text" >이렇게 주문하시겠어요?</p>
+                <div class="modal-btn">
+                    <button class="no-btn2">잠시만요</button>
+                    <button class="yes-btn4">그럴게요</button>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <!-- 자바스크립트 연결하기 -->
     <script src="../js/sandwich.js"></script>
+    <script src="../js/wrap.js"></script>
+    <script src="../js/salad.js"></script>
+    <script src="../js/breakfast.js"></script>
+    <script src="../js/smileSub.js"></script>
     <script src="../js/order.js"></script>
 
 </body>

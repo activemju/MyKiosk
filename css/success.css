@@ -61,7 +61,7 @@ body{
     display: inline-block;
 }
 
-.title-container, .subtitle, .contour-1, .contour-2, .logo{
+.title-container, .subtitle, .contour-1, .logo{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -76,27 +76,38 @@ body{
 }
 
 .contour-1{
-    top: 382px;
+    top: 385px;
 }
 
-.paragraph{
+.order-number-container{
     position: absolute;
-    top: 414px;
-    left: 85px;
+    top: 475px;
+    left: 300px;
+
+    text-align: center;
+}
+
+.order-number{
+    margin-bottom: 35px;
 }
 
 .contour-2{
-    top: 534px;
-}
-
-.btn-container{
     position: absolute;
-    top: 615px;
-    left: 314.5px;
+    transform: rotate(90deg);
+    left: 503px;
+    top: 585px;
 }
 
-.take-out, .eat-in{
-    padding-bottom: 6px;
+.price-btn-container{
+    position: absolute;
+    top: 475px;
+    left: 870px;
+
+    text-align: center;
+}
+
+.total-price{
+    margin-bottom: 65px;
 }
 
 .logo{
@@ -111,29 +122,24 @@ body{
     font-family: 'Toss Face';
 }
 
-.title-text, .subtitle, .contour-1, .contour-2, .take-out, .eat-in{
+.title-text, .subtitle, .contour-1, .contour-2, .order-number, .random-number, .total-price, .move-main{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
 }
 
-.paragraph{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-}
-
-.title-text, .subtitle, .take-out, .eat-in{
+.title-text, .subtitle, .order-number, .random-number, .total-price, .move-main{
     color: #000;
 }
 
-.contour-1, .contour-2, .paragraph{
+.contour-1, .contour-2{
     color: #CCC;
 }
 
-.title-text, .title-emoji{
+.title-text, .title-emoji, .random-number{
     font-size: 9.6rem;
 }
 
-.subtitle, .take-out, .eat-in{
+.subtitle, .order-number, .total-price, .move-main{
     font-size: 3.2rem;
 }
 
@@ -141,22 +147,18 @@ body{
     font-size: 2.0rem;
 }
 
-.paragraph{
-    font-size: 1.6rem;
-}
-
 /* 버튼 스타일링 */
 
-.btn-container button{
+.price-btn-container button{
     background-color: #fff;
     border: solid #000 2px;
     min-width: 300px;
     min-height: 100px;
-    margin: 0 37.5px;
     border-radius: 100px;
+    padding-bottom: 6px;
 }
 
-.btn-container button:hover{
+.price-btn-container button:hover{
     background-color: #009945;
     cursor: pointer;
 }

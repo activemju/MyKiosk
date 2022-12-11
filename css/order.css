@@ -10,6 +10,10 @@ body,p,ol,ul{
     padding-left: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0;  /* 스크롤바의 너비 */
+}
+
 /* 웹폰트 연결 */
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
@@ -17,6 +21,80 @@ body,p,ol,ul{
 @font-face{
     src: url("../font/TossFaceFontMac.ttf");
     font-family: "Toss Face";
+}
+
+/* ============================================================================================================================ */
+
+/* 모달 */
+
+.modals{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden, .hidethis{
+    display: none;
+}
+
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal1, .modal2, .modal3, .modal4{
+    width: 600px;
+    height: 450px;
+    position: fixed;
+
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    text-align: center;
+}
+
+.modal-emoji{
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    font-family: 'Toss Face';
+    font-size: 9.6rem;
+}
+
+.modal-text{
+    margin-top: 0;
+    margin-bottom: 50px;
+
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #000;
+}
+
+.modal-btn button{
+    background-color: #fff;
+    border: solid #000 2px;
+    min-width: 200px;
+    min-height: 70px;
+    border-radius: 100px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #000;
+    margin: 10px;
+    padding-bottom: 3px;
+}
+
+.modal-btn button:hover{
+    background-color: #009945;
+    cursor: pointer;
 }
 
 /* ============================================================================================================================ */
@@ -40,28 +118,31 @@ body,p,ol,ul{
 
 /* 카테고리 레이아웃(left-section)*/
 
-.category{
+.category-and-menu{
     margin-left: 54.5px;
 }
 
-button div{
+label div{
     display: inline-block;
     vertical-align: middle;
 }
 
 .category-emoji{
-    margin-left: 15px;
+    margin-top: 12px;
+    margin-left: 20px;
     margin-right: 10px;
 }
 
 .category-text{
-    margin-bottom: 3px;
+    margin-top: 12px;
+    margin-bottom: 3.5px;
 }
 
 /* 카테고리 스타일링(left-section)*/
 
-/* 클릭 전 CSS */
-.sandwich, .wrap, .salad, .breakfast, .smileSub{
+input[type="radio"] {display: none;}
+input[type="radio"] + label {
+    display: inline-block;
     background-color: #fff;
     border: solid #000 2px;
     min-width: 200px;
@@ -72,11 +153,7 @@ button div{
 
     cursor: pointer;
 }
-
-/* 클릭 후 CSS */
-.sandwich{
-    background-color: #009945;
-}
+input[type="radio"]:checked + label {background-color: #009945;}
 
 .category-emoji{
     font-family: 'Toss Face';
@@ -90,16 +167,28 @@ button div{
     color: #000;
 }
 
+/* 카테고리 탭별 메뉴 인터렉션(left-section) */
+
+.menu {display:none;}
+input[id="sandwich"]:checked ~ .tab1 {display:block;}
+input[id="wrap"]:checked ~ .tab2 {display:block;}
+input[id="salad"]:checked ~ .tab3 {display:block;}
+input[id="breakfast"]:checked ~ .tab4 {display:block;}
+input[id="smileSub"]:checked ~ .tab5 {display:block;}
+
 /* ============================================================================================================================ */
 
 /* 메뉴 공통 레이아웃(left-section)*/
 
-.new, .premium, .classic, .fresh-and-light{
+.new, .premium, .classic, .fresh-and-light, 
+.grilled, .normal,
+.break-grilled, .break-normal, .break-sandwich,
+.cookie, .soup, .potato{
     margin-top: 53px;
-    margin-left: 62px;
+    margin-left: 8.5px;
 }
 
-.fresh-and-light{
+.fresh-and-light, .normal, .break-sandwich, .potato{
     margin-bottom: 50px;
 }
 
@@ -107,11 +196,22 @@ button div{
     margin-bottom: 25px;
 }
 
-.premium-item-list, .classic-item-list, .fresh-and-light-item-list {
+.premium-item-list, .classic-item-list, .fresh-and-light-item-list,
+.premium-item-salad, .classic-item-salad, .fresh-and-light-item-salad,
+.cookie-item-list, .potato-item-list{
     display: grid;
     grid-template-columns: 270px 270px 270px 270px;
     grid-template-rows: 300px 300px;
     grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.grilled-item-list, .normal-item-list,
+.break-grilled-item-list, .break-normal-item-list, .break-sandwich-item-list,
+.soup-item-list{
+    display: grid;
+    grid-template-columns: 270px 270px 270px 270px;
+    grid-template-rows: 300px;
     grid-column-gap: 20px;
 }
 
@@ -123,18 +223,68 @@ button div{
 
     padding-top: 220px;
     padding-left: 20px;
-    
 }
 
-.item img{
+.sandwich-img{
     position: absolute;
     top: 0;
     left: 0;
+    height: 250px;
 }
+
+.sandwich-img2{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 300px;
+}
+
+.salad-img{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 230px;
+}
+
+.salad-img2{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 237px;
+}
+
+.wrap-img{
+    position: absolute;
+    top: -25px;
+    left: 0;
+    height: 300px;
+}
+
+.cookie-img{
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    height: 250px;
+}
+
+.soup-img{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 225px;
+}
+
+.chip-img{
+    position: absolute;
+    top: -35px;
+    left: 0;
+    height: 300px;
+}
+
 
 /* 메뉴 공통 스타일링(left-section) */
 
-.title, .name,.price{
+.title, .name, .price{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
 }
@@ -152,10 +302,6 @@ button div{
 .price{
     font-size: 1.6rem;
     color: #ccc;
-}
-
-.sandwich-img{
-    height: 250px;
 }
 
 .item{
